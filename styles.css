@@ -1,0 +1,122 @@
+body{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+h1{
+    font-size: 4.5em;
+}
+
+p{
+    font-size: 2em;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #545454;
+    text-decoration: none; 
+}
+
+#header{
+    height: 100vh;
+    background-image: linear-gradient(
+                     rgba(20,20,20, .5), 
+                     rgba(20,20,20, .5)), url(images/Tracy_Caldwell_Dyson_in_Cupola_ISS.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+#intro-text{
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #fff;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+
+#maps  {
+    background: black;
+    padding: 100px;
+    text-align: center;
+    color: #fff;
+}
+
+#map { 
+    height: 450px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+}
+
+#mapdata{
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+#mapdata li{
+    color: #fff;
+    list-style: none;
+    display: inline-block;
+    padding: 15px;
+    font-size: 2em;
+}
+
+#crew{
+    padding: 100px;
+    text-align: center;
+}
+
+#number{
+    padding-bottom: 50px;
+}
+
+#names{
+    margin: 0 auto;
+    width: 50%;
+}
+
+#names li{
+    list-style: none;
+    font-size: 2.5em;
+    margin: 20px;
+    padding: 30px;
+}
+
+#footer{
+    background: black;
+    text-align: center;
+    padding: 150px;
+    color: #545454;
+}
+
+#footer-icons{
+    margin: 0 auto;
+    width: 50%;
+}
+
+#footer-icons ul{
+    padding: 0;
+}
+
+#footer-icons li{
+    list-style: none;
+    display: inline-block;
+    font-size: 2em;
+    padding: 15px;
+}
+
+#footer-text{
+    margin: 0 auto;
+    width: 50%;
+}
