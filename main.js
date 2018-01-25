@@ -5,9 +5,9 @@ $(document).ready(function () {
     
     //Get latitude and longitude and move the icon every 3 seconds
     function moveISS() {
-        $.getJSON('http://api.open-notify.org/iss-now.json?callback=?', function (data) {
-            var lat = data['iss_position']['latitude'];
-            var lon = data['iss_position']['longitude'];
+        $.getJSON('https://api.wheretheiss.at/v1/satellites/25544', function (data) {
+            var lat = data['latitude'].toFixed(4);
+            var lon = data['longitude'].toFixed(4);
             
             $('#mapdata').html('<ul><li>LATITUDE: ' + lat + '</li><li>LONGITUDE: ' + lon + '</li></ul>');
 
@@ -27,7 +27,7 @@ $(document).ready(function () {
     
     //ISS Icon
     var ISSIcon = L.icon({
-        iconUrl: 'images/iss2.png',
+        iconUrl: 'images/ISS2.png',
         iconSize: [70, 50],
         iconAnchor: [35, 15],
         popupAnchor: [50, 25],
@@ -62,14 +62,24 @@ $(document).ready(function () {
     height_speed();
 });
 
-    //Get the number of people in space
-    $.getJSON('http://api.open-notify.org/astros.json', function (data) {
+        
+var url = "http://api.open-notify.org/astros.json";
 
-        $('#number').append('<h2 class="text-center">There are ' + data['number'] + ' astronauts on board the ISS right now</h2>');
-
+fetch(url)
+    .then(function (res) {
+        return res.json()
+    })
+    .then(function(data){
+        var numbers = document.getElementById('number');
+        numbers.innerHTML = '<h2 class="text-center">There are ' + data['number'] + ' astronauts on board the ISS right now</h2>';
+    
         data['people'].forEach(function (data) {
-            $('#names').append('<li class="text-center">' + data['name'] + '</li>');
+            var names = document.getElementById('names');
+            var name = '<li class="text-center">' + data['name'] + '</li>';
+            names.insertAdjacentHTML('beforeend', name);
         });
-
+    
 });
+
+
 
