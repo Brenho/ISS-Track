@@ -17,21 +17,21 @@
     
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-   crossorigin=""></script>
-    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    
-    <script src="main.js"></script>
+   crossorigin=""></script>  
 </head>
 <body>
-    <div id="header">
-        <div id="intro-text">
+    
+    <section class="hero">
+        <div class="background-image" style="background-image: url(images/Tracy_Caldwell_Dyson_in_Cupola_ISS.jpg);"></div>
+        <div class="hero-content">
             <h1>ISS TRACK</h1>
-            <p>WHERE IS THE INTERNATIONAL SPACE STATION?</p>
+            <h3>Where is the international space station right now?</h3>
         </div>
-    </div>
+    </section>
+    
     
     <div id="maps" class="container-fluid">
-            <h2></h2>
+            <div id="speedData"></div>
             <div id="map"></div>
             <div id="mapdata"></div>
     </div>
@@ -55,5 +55,6 @@
             <p>Copyright &copy; Richie Brennan 2017</p>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
