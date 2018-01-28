@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <title>ISS Track</title>
     <!--fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
-    <!--Bootstrap and custom styles-->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!--custom styles-->
     <link rel="stylesheet" href="styles.css">
     <!--Leaflet styles-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
@@ -14,7 +13,7 @@
    crossorigin=""/>
     <!--Font Awesome-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
+    <!--Leaflet-->
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
    crossorigin=""></script>  
@@ -22,6 +21,7 @@
 <body>
     
     <section class="hero">
+        <div id="color-overlay"></div>
         <div class="background-image" style="background-image: url(images/Tracy_Caldwell_Dyson_in_Cupola_ISS.jpg);"></div>
         <div class="hero-content">
             <h1>ISS TRACK</h1>
@@ -29,21 +29,20 @@
         </div>
     </section>
     
-    
-    <div id="maps" class="container-fluid">
+    <section class="maps">
             <div id="speedData"></div>
             <div id="map"></div>
             <div id="mapdata"></div>
-    </div>
+    </section>
     
-    <div id="crew" class="container-fluid">
+    <section class="crew">
             <h1>CREW</h1>
             <div id="number"></div>
             <div id="names"></div>
-    </div>
+    </section>
     
-    <div id="footer" class="container-fluid">
-        <div id="footer-icons">
+    <footer>
+       <div id="footer-icons">
             <ul>
                 <li><a href="https://twitter.com/RichieBrennan"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                 <li><a href="mailto:<richieramone82@gmail.com>"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
@@ -54,7 +53,7 @@
             <p>Powered by: <a href="http://open-notify.org/">open-notify</a> &amp; <a href="https://wheretheiss.at/w/developer">where the ISS at?</a></p>
             <p>Copyright &copy; Richie Brennan 2017</p>
         </div>
-    </div>
+    </footer>
     <script src="main.js"></script>
 </body>
 </html>
